@@ -1,0 +1,16 @@
+{
+  "name": "Inkwell",
+  "short_name": "Inkwell",
+  "description": "Inkwell dovmeciler ve musterileri konforlu sekilde bulusturur.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0f1015",
+  "theme_color": "#0f1015",
+  "icons": [
+    {
+      "src": "./assets/images/inkwell-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

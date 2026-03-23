@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inkwell - Dövme Dünyasını Keşfet</title>
+    <title>Inkwell - Dovme Dunyasini Kesfet</title>
     <meta
       name="description"
       content="Inkwell ile aradigin dovmeciye veya dogru musteriye daha kolay ulas, konforlu bir eslesme deneyimi yas."
@@ -21,16 +21,16 @@
       content="Inkwell ile kullanicilar ve dovmeciler arasinda hizli, rahat ve guvenli bir baglanti kur."
     />
     <meta property="og:url" content="https://USERNAME.github.io/REPO/" />
-    <meta property="og:image" content="https://USERNAME.github.io/REPO/assets/images/inkwell-logo.png" />
+    <meta property="og:image" content="https://USERNAME.github.io/REPO/inkwell-logo.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Inkwell - Dovme Dunyasini Kesfet" />
     <meta
       name="twitter:description"
       content="Inkwell ile kullanicilar ve dovmeciler arasinda hizli, rahat ve guvenli bir baglanti kur."
     />
-    <meta name="twitter:image" content="https://USERNAME.github.io/REPO/assets/images/inkwell-logo.png" />
-    <link rel="icon" type="image/png" href="./assets/images/inkwell-logo.png" />
-    <link rel="apple-touch-icon" href="./assets/images/inkwell-logo.png" />
+    <meta name="twitter:image" content="https://USERNAME.github.io/REPO/inkwell-logo.png" />
+    <link rel="icon" type="image/png" href="./inkwell-logo.png" />
+    <link rel="apple-touch-icon" href="./inkwell-logo.png" />
     <link rel="manifest" href="./site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,13 +55,13 @@
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Ana icerige gec</a>
+    <a class="skip-link" href="#main-content" id="skip-link">Ana icerige gec</a>
     <div class="bg-glow bg-glow--one" aria-hidden="true"></div>
     <div class="bg-glow bg-glow--two" aria-hidden="true"></div>
 
     <header class="header" role="banner">
       <a href="#hero" class="logo">
-        <img src="./assets/images/inkwell-logo.png" alt="Inkwell logosu" class="logo__img" />
+        <img src="./inkwell-logo.png" alt="Inkwell logosu" class="logo__img" id="logo-image" />
         <span>Inkwell</span>
       </a>
       <button
@@ -75,34 +75,40 @@
         <span aria-hidden="true"></span>
       </button>
       <nav class="nav" id="site-nav" aria-label="Ana menu">
-        <button class="nav-link" data-scroll="#about">Hakkımızda</button>
-        <button class="nav-link" data-scroll="#features">Özellikler</button>
-        <button class="nav-link" data-scroll="#screens">Ekranlar</button>
-        <button class="nav-link" data-scroll="#waitlist">Bekleme Listesi</button>
-        <button class="nav-link" data-scroll="#contact">İletişim</button>
+        <button class="nav-link" data-scroll="#about" id="nav-about">Hakkimizda</button>
+        <button class="nav-link" data-scroll="#features" id="nav-features">Ozellikler</button>
+        <button class="nav-link" data-scroll="#screens" id="nav-screens">Ekranlar</button>
+        <button class="nav-link" data-scroll="#waitlist" id="nav-waitlist">Bekleme Listesi</button>
+        <button class="nav-link" data-scroll="#contact" id="nav-contact">Iletisim</button>
       </nav>
-      <button class="btn btn--small" data-scroll="#waitlist">Erken Erişim</button>
+      <div class="header__tools">
+        <div class="lang-switch" role="group" aria-label="Dil secimi">
+          <button class="lang-switch__btn is-active" data-lang="tr" type="button">TR</button>
+          <button class="lang-switch__btn" data-lang="en" type="button">EN</button>
+        </div>
+        <button class="btn btn--small" data-scroll="#waitlist" id="top-cta">Erken Erisim</button>
+      </div>
     </header>
 
     <main id="main-content">
       <section id="hero" class="section hero reveal" aria-labelledby="hero-title">
         <div class="hero__content">
-          <p class="eyebrow">Yeni Nesil Dövme Platformu</p>
+          <p class="eyebrow" id="hero-eyebrow">Yeni Nesil Dovme Platformu</p>
           <h1 id="hero-title">Aradigin dovme stilini ve dogru kisiyi daha hizli bul.</h1>
-          <p class="hero__text">
+          <p class="hero__text" id="hero-text">
             Inkwell, dovmeci ile musteri arasinda rahat ve guven veren bir baglanti kurar.
             Musteri ihtiyacina uygun sanatciya ulasir, sanatci da dogru musteriyle kolayca eslesir.
           </p>
           <div class="hero__actions">
-            <button class="btn" data-scroll="#waitlist">Bekleme Listesine Katıl</button>
-            <button class="btn btn--ghost" data-scroll="#features">Nasıl Çalışır?</button>
+            <button class="btn" data-scroll="#waitlist" id="hero-cta-primary">Bekleme Listesine Katil</button>
+            <button class="btn btn--ghost" data-scroll="#features" id="hero-cta-secondary">Nasil Calisir?</button>
           </div>
         </div>
         <div class="hero__mockup float">
           <div class="phone" data-parallax="0.045">
             <div class="phone__top"></div>
             <div class="phone__screen">
-              <img src="./assets/images/screen-discover.png" alt="Inkwell kesfet ekrani" class="phone__img" />
+              <img src="./screen-discover.png" alt="Inkwell kesfet ekrani" class="phone__img" id="hero-screen-image" />
             </div>
           </div>
         </div>
@@ -110,10 +116,10 @@
 
       <section id="about" class="section reveal" aria-labelledby="about-title">
         <div class="section__head">
-          <p class="eyebrow">Hakkımızda</p>
+          <p class="eyebrow" id="about-eyebrow">Hakkimizda</p>
           <h2 id="about-title">Vizyonumuz: dovme surecini herkes icin daha net, hizli ve konforlu hale getirmek.</h2>
         </div>
-        <p class="section__lead">
+        <p class="section__lead" id="about-lead">
           Inkwell, musteri tarafinda karar vermeyi kolaylastirir; sanatci tarafinda ise dogru talebi bulmayi
           hizlandirir. Ilk fikirden iletisime ve planlamaya kadar tum adimlar sade, anlasilir ve rahat bir deneyime
           donusur.
@@ -122,115 +128,115 @@
 
       <section id="features" class="section reveal" aria-labelledby="features-title">
         <div class="section__head">
-          <p class="eyebrow">Özellikler</p>
+          <p class="eyebrow" id="features-eyebrow">Ozellikler</p>
           <h2 id="features-title">Daha hizli eslesme, daha rahat iletisim ve daha guclu profil deneyimi.</h2>
         </div>
         <div class="feature-grid">
           <article class="feature-card" style="--delay: 0ms">
             <span class="feature-card__dot" aria-hidden="true"></span>
-            <h3>Akıllı Keşif Akışı</h3>
-            <p>Tarz, butce ve lokasyon filtreleriyle musteri aradigini daha kisa surede bulur.</p>
+            <h3 id="feature-title-1">Akilli Kesif Akisi</h3>
+            <p id="feature-text-1">Tarz, butce ve lokasyon filtreleriyle musteri aradigini daha kisa surede bulur.</p>
           </article>
           <article class="feature-card" style="--delay: 120ms">
             <span class="feature-card__dot" aria-hidden="true"></span>
-            <h3>Sanatçı Profilleri</h3>
-            <p>Sanatcilar uzmanligini net gosteren profillerle dogru musteriye daha kolay ulasir.</p>
+            <h3 id="feature-title-2">Sanatci Profilleri</h3>
+            <p id="feature-text-2">Sanatcilar uzmanligini net gosteren profillerle dogru musteriye daha kolay ulasir.</p>
           </article>
           <article class="feature-card" style="--delay: 240ms">
             <span class="feature-card__dot" aria-hidden="true"></span>
-            <h3>Konforlu Eslestirme</h3>
-            <p>Kullanici beklentisi ile sanatci hizmetini dogal bir akista bulusturan sistem.</p>
+            <h3 id="feature-title-3">Konforlu Eslestirme</h3>
+            <p id="feature-text-3">Kullanici beklentisi ile sanatci hizmetini dogal bir akista bulusturan sistem.</p>
           </article>
           <article class="feature-card" style="--delay: 360ms">
             <span class="feature-card__dot" aria-hidden="true"></span>
-            <h3>Güvenli İletişim</h3>
-            <p>Ilk mesajdan randevu planlamasina kadar herkes icin rahat ve kontrollu iletisim.</p>
+            <h3 id="feature-title-4">Guvenli Iletisim</h3>
+            <p id="feature-text-4">Ilk mesajdan randevu planlamasina kadar herkes icin rahat ve kontrollu iletisim.</p>
           </article>
         </div>
       </section>
 
       <section id="screens" class="section reveal" aria-labelledby="screens-title">
         <div class="section__head">
-          <p class="eyebrow">Uygulama Ekranlari</p>
+          <p class="eyebrow" id="screens-eyebrow">Uygulama Ekranlari</p>
           <h2 id="screens-title">Inkwell deneyimini arayuz uzerinden kesfet.</h2>
         </div>
         <div class="screen-grid" aria-label="Inkwell uygulama ekran galerisi">
           <figure class="screen-card">
-            <img src="./assets/images/screen-messages.png" alt="Inkwell mesajlar ekrani" loading="lazy" data-parallax="0.03" />
+            <img src="./screen-messages.png" alt="Inkwell mesajlar ekrani" loading="lazy" data-parallax="0.03" />
           </figure>
           <figure class="screen-card">
-            <img src="./assets/images/screen-profile.png" alt="Inkwell profil ekrani" loading="lazy" data-parallax="0.05" />
+            <img src="./screen-profile.png" alt="Inkwell profil ekrani" loading="lazy" data-parallax="0.05" />
           </figure>
           <figure class="screen-card">
-            <img src="./assets/images/screen-post.png" alt="Inkwell paylasim ekrani" loading="lazy" data-parallax="0.04" />
+            <img src="./screen-post.png" alt="Inkwell paylasim ekrani" loading="lazy" data-parallax="0.04" />
           </figure>
           <figure class="screen-card">
-            <img src="./assets/images/screen-detail.png" alt="Inkwell detay ekrani" loading="lazy" data-parallax="0.06" />
+            <img src="./screen-detail.png" alt="Inkwell detay ekrani" loading="lazy" data-parallax="0.06" />
           </figure>
           <figure class="screen-card">
-            <img src="./assets/images/screen-discover.png" alt="Inkwell kesfet ekrani" loading="lazy" data-parallax="0.035" />
+            <img src="./screen-discover.png" alt="Inkwell kesfet ekrani" loading="lazy" data-parallax="0.035" />
           </figure>
         </div>
       </section>
 
       <section id="waitlist" class="section waitlist reveal" aria-labelledby="waitlist-title">
         <div class="section__head">
-          <p class="eyebrow">Bekleme Listesi</p>
+          <p class="eyebrow" id="waitlist-eyebrow">Bekleme Listesi</p>
           <h2 id="waitlist-title">Ilk kullanicilar arasinda yerini al, erken erisim avantajlarini yakala.</h2>
         </div>
 
         <div class="role-switch" role="tablist" aria-label="Kayıt tipi seçimi">
-          <button class="role-switch__btn is-active" data-role="user" role="tab" aria-selected="true">
-            Kullanıcı Kaydı
+          <button class="role-switch__btn is-active" data-role="user" role="tab" aria-selected="true" id="role-user-btn">
+            Kullanici Kaydi
           </button>
-          <button class="role-switch__btn" data-role="artist" role="tab" aria-selected="false">
-            Dövmeci Kaydı
+          <button class="role-switch__btn" data-role="artist" role="tab" aria-selected="false" id="role-artist-btn">
+            Dovmeci Kaydi
           </button>
         </div>
 
         <div class="forms-wrap">
           <form id="user-form" class="form is-active" novalidate>
             <div class="form-row">
-              <label for="user-name">Ad Soyad</label>
-              <input id="user-name" name="name" type="text" placeholder="Adınız Soyadınız" required />
+              <label for="user-name" id="label-user-name">Ad Soyad</label>
+              <input id="user-name" name="name" type="text" placeholder="Adiniz Soyadiniz" required />
             </div>
             <div class="form-row">
-              <label for="user-email">E-posta</label>
+              <label for="user-email" id="label-user-email">E-posta</label>
               <input id="user-email" name="email" type="email" placeholder="ornek@mail.com" required />
             </div>
             <div class="form-row">
-              <label for="user-city">Şehir</label>
-              <input id="user-city" name="city" type="text" placeholder="İstanbul" required />
+              <label for="user-city" id="label-user-city">Sehir</label>
+              <input id="user-city" name="city" type="text" placeholder="Istanbul" required />
             </div>
             <label class="check">
               <input type="checkbox" required />
-              <span>Bilgilendirme ve erken erişim iletişimi almayı kabul ediyorum.</span>
+              <span id="consent-user">Bilgilendirme ve erken erisim iletisimi almayi kabul ediyorum.</span>
             </label>
-            <button class="btn btn--full" type="submit">Kullanıcı Olarak Kaydol</button>
+            <button class="btn btn--full" type="submit" id="submit-user">Kullanici Olarak Kaydol</button>
           </form>
 
           <form id="artist-form" class="form" novalidate>
             <div class="form-row">
-              <label for="artist-name">Stüdyo / Sanatçı Adı</label>
+              <label for="artist-name" id="label-artist-name">Studyo / Sanatci Adi</label>
               <input id="artist-name" name="studio" type="text" placeholder="Studio Ink" required />
             </div>
             <div class="form-row">
-              <label for="artist-email">E-posta</label>
+              <label for="artist-email" id="label-artist-email">E-posta</label>
               <input id="artist-email" name="email" type="email" placeholder="studio@mail.com" required />
             </div>
             <div class="form-row">
-              <label for="artist-style">Uzmanlık Stili</label>
+              <label for="artist-style" id="label-artist-style">Uzmanlik Stili</label>
               <input id="artist-style" name="style" type="text" placeholder="Realism, Fine Line..." required />
             </div>
             <div class="form-row">
-              <label for="artist-city">Şehir</label>
+              <label for="artist-city" id="label-artist-city">Sehir</label>
               <input id="artist-city" name="city" type="text" placeholder="Ankara" required />
             </div>
             <label class="check">
               <input type="checkbox" required />
-              <span>Bilgilendirme ve erken erişim iletişimi almayı kabul ediyorum.</span>
+              <span id="consent-artist">Bilgilendirme ve erken erisim iletisimi almayi kabul ediyorum.</span>
             </label>
-            <button class="btn btn--full" type="submit">Dövmeci Olarak Kaydol</button>
+            <button class="btn btn--full" type="submit" id="submit-artist">Dovmeci Olarak Kaydol</button>
           </form>
         </div>
         <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
@@ -238,19 +244,19 @@
 
       <section id="contact" class="section reveal" aria-labelledby="contact-title">
         <div class="section__head">
-          <p class="eyebrow">İletişim</p>
+          <p class="eyebrow" id="contact-eyebrow">Iletisim</p>
           <h2 id="contact-title">Ortakliklar, sanatci katilimi ve erken erisim icin Inkwell ile iletisimde kal.</h2>
         </div>
         <div class="contact-box">
           <p>E-posta: hello@inkwell.app</p>
           <p>Topluluk: inkwell.app/community</p>
-          <button class="btn btn--ghost" data-scroll="#waitlist">Hemen Bekleme Listesine Katıl</button>
+          <button class="btn btn--ghost" data-scroll="#waitlist" id="contact-cta">Hemen Bekleme Listesine Katil</button>
         </div>
       </section>
     </main>
 
     <footer class="footer" role="contentinfo">
-      <p>© 2026 Inkwell. Tüm hakları saklıdır.</p>
+      <p id="footer-copy">© 2026 Inkwell. Tum haklari saklidir.</p>
     </footer>
 
     <script src="./script.js"></script>

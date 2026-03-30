@@ -1,7 +1,7 @@
 {
   "name": "Inkwell",
   "short_name": "Inkwell",
-  "description": "Inkwell dovmeciler ve musterileri konforlu sekilde bulusturur.",
+  "description": "Inkwell dövmecileri ve müşterileri konforlu şekilde buluşturur.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#0f1015",
